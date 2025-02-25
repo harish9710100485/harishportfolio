@@ -1,144 +1,267 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-	<head>
-		<title>Harish Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harish Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0f8ff, #e1f5fe);
+      /* Light, airy background */
+      color: #333;
+      font-family: 'Poppins', sans-serif;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+  .portfolio-section {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 15px;
+      margin: 30px auto;
+      max-width: 1200px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Harish Portfolio<br />
-						</h1>
-						<p>Fresher skilled in SQL, HTML and Python <a href="https://www.linkedin.com/in/harish-perumal-5a4461270?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bnth%2BI%2B1bQ1Wu9MVydjnj4A%3D%3D">@Harish</a> </a>
-						</p>
-					
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+  .portfolio-section:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+    }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Harish portfolio</a>
-					</header>
+  .portfolio-section h1,
+  .portfolio-section h2,
+  .portfolio-section h3 {
+      font-weight: 700;
+      color: #2196f3;
+      /* Blue for headings */
+      transition: color 0.3s ease;  /* Add transition for smooth color change */
+    }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/harish-perumal-5a4461270?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBArj%2BS32R52O54nhDectmw%3D%3D" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									
-									<li><a href="https://github.com/harish9710100485" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									
-									<h2><a href="#"> Smart Healthcare kit using IoT<br />
-									</a></h2>
-									<p>In this project i created a kit that can help doctors to monitor patients remotety regardless of distance.The
-										realtime data are collected from the kit using sensors which is connected to a Smartphone(Iot device) 
-										then the data are processed and intimates the doctors and caretakers when the critical point is exceeded.
-									</p>
-								</header>
-								<a href="#" class="image main"><img src="images/1703043972919.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/harish9710100485/samrt-healthcare.github.io" class="button large">View project</a></li>
-								</ul>
-							</article>
-
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										
-										<h2><a href="#">Skin disease prediction using Image processing
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/skin.jpeg" alt="" /></a>
-									<p>This project is based on predicting skin disesae by image processing.The process involes the collection of
-										test data and comparing the real time data with the test samples to produce the appropriate result.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/harish9710100485/Skin-disease-prediction-using-Image-processing" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="#">PowerBI Project<br />
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/bi.png" alt="" /></a>
-									<p>Created a dashboard for personal and for studing purpose .</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/harish9710100485/-PowerBI-Project-using-Zomato-Dataset" class="button">View Porject</a></li>
-									</ul>
-								</article>
+  .portfolio-section h1:hover,
+  .portfolio-section h2:hover,
+  .portfolio-section h3:hover {
+      color: #1976d2;  /* Darker blue on hover */
+    }
 
 
-								
-							</section>
+  .portfolio-section p {
+      line-height: 1.7;
+    }
 
-						
+  .portfolio-section a.link-primary {
+      color: #3f51b5;
+      /* Indigo for links */
+      transition: color 0.3s ease;
+    }
 
-				
+  .portfolio-section a.link-primary:hover {
+      color: #303f9f;
+    }
 
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Tamil Nadu,India<br />
-								Urappakkam,603210</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">9710100485</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">pharish2309@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/harish-perumal-5a4461270?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBArj%2BS32R52O54nhDectmw%3D%3D" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									
-									<li><a href="https://github.com/harish9710100485" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+  .card {
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid #e0e0e0;
+      /* Light border for cards */
+    }
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+  .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
 
-			</div>
+  .btn-primary {
+      background-color: #4caf50;
+      /* Green for primary buttons */
+      border-color: #4caf50;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  .btn-primary:hover {
+      background-color: #43a047;
+      border-color: #43a047;
+    }
 
-	</body>
+  .list-inline-item.link-primary {
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+  .list-inline-item.link-primary:hover {
+      color: #303f9f;
+    }
+
+  .image.fit img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Custom Styling for Hero Section */
+  .hero-section {
+      text-align: center;
+      padding: 100px 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('images/hero-background.jpg');
+      /* Replace with your hero image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      /* Add this for the shape */
+      transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+    }
+
+  .hero-section:hover {
+      transform: translateY(-5px); /* Move slightly up on hover */
+    }
+
+  .hero-section h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      z-index: 1;
+      /* Ensure text is above the shape */
+      transition: transform 0.3s ease, text-shadow 0.3s ease;
+      /* Add transitions */
+    }
+
+  .hero-section:hover h1 {
+      transform: scale(1.1);
+      /* Scale up on hover */
+      text-shadow: 0 0 20px white;
+      /* Add a glow on hover */
+    }
+
+  .hero-section p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      z-index: 1;
+      /* Ensure text is above the shape */
+    }
+
+  .hero-section.btn-primary {
+      z-index: 1;
+      /* Ensure button is above the shape */
+    }
+
+    /* Add this for the shape */
+  .hero-section::before {
+      content: "";
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 500px;
+      height: 500px;
+      background-color: #f06292;
+      /* Example color, change as needed */
+      border-radius: 50%;
+      opacity: 0.5;
+      z-index: 0;
+      /* Ensure shape is behind the text */
+      animation: rotateShape 15s linear infinite;
+    }
+
+    /* Add this for the animation */
+    @keyframes rotateShape {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="hero-section">
+      <h1>Harish Portfolio</h1>
+      <p>Information Technology Engineer | Problem-Solver | Technology Enthusiast</p>
+      <a href="#main" class="btn btn-primary">Explore My Work</a>
+    </div>
+
+    <div id="main" class="portfolio-section">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="images/skin.jpeg" class="card-img-top" alt="Skin Disease Prediction">
+            <div class="card-body">
+              <h2 class="card-title">Skin Disease Prediction using Image Processing</h2>
+              <p class="card-text">Developed an AI-driven model to detect skin diseases from images using machine
+                learning techniques.</p>
+              <a href="https://github.com/harish9710100485/Skin-disease-prediction-using-Image-processing" class="btn btn-primary">View
+                Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="images/Honeywell-Launches-Real-Time-Health-Monitoring-System-RTHMS.png" class="card-img-top"
+              alt="Healthcare IoT">
+            <div class="card-body">
+              <h2 class="card-title">Smart Healthcare Kit using IoT</h2>
+              <p class="card-text">Developed an IoT-based remote patient monitoring system that allows doctors to track
+                health parameters in real-time.</p>
+              <a href="https://github.com/harish9710100485/samrt-healthcare.github.io" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="images/sales.png" class="card-img-top" alt="Sales Data">
+            <div class="card-body">
+              <h2 class="card-title">Sales Data Processing and Forecasting</h2>
+              <p class="card-text">Developed a predictive analytics model to process sales data and forecast future
+                trends using machine learning.</p>
+              <a href="https://github.com/harish9710100485/Linear_Regression" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+
+    <div class="portfolio-section">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>About Me</h2>
+          <p>
+            Information Technology Engineer | Problem-Solver | Technology Enthusiast<br>
+            Dedicated to designing and implementing efficient, scalable, and secure IT solutions. <br>
+            Find me on <a href="https://www.linkedin.com/in/harish-perumal-5a4461270" target="_blank"
+              class="link-primary">LinkedIn</a>
+            and <a href="https://github.com/harish9710100485" target="_blank" class="link-primary">GitHub</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-section">
+      <div class="row">
+        <div class="col-md-3">
+          <h3>Address</h3>
+          <p>Tamil Nadu, India<br>Urappakkam, 603210</p>
+        </div>
+        <div class="col-md-3">
+          <h3>Phone</h3>
+          <p><a href="tel:+919710100485" class="link-primary">+91 9710100485</a></p>
+        </div>
+        <div class="col-md-3">
+          <h3>Email</h3>
+          <p><a href="mailto:pharish2309@gmail.com" class="link-primary">pharish2309@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
